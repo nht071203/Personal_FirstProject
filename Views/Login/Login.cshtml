@@ -1,0 +1,110 @@
+@model User
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/styleAdmin.css" />
+<link rel="stylesheet" href="~/css/login.css" />
+
+<section class="vh-100">
+    <div class="container h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100 mt-4 p-5" 
+        style="background-color: #eee; border-radius: 50px;">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                    class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-5 offset-xl-1">
+                <form asp-action="Login" method="post">
+                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                        @* <button type="button" data-mdb-button-init data-mdb-ripple-init
+                        class="btn btn-primary btn-floating mx-1">
+                        <i class="fab fa-facebook-f"></i>
+                        </button>
+
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                        class="btn btn-primary btn-floating mx-1">
+                        <i class="fab fa-twitter"></i>
+                        </button>
+
+                        <button type="button" data-mdb-button-init data-mdb-ripple-init
+                        class="btn btn-primary btn-floating mx-1">
+                        <i class="fab fa-linkedin-in"></i>
+                        </button> *@
+                    </div>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-group w-100">
+                        <div class="form-hover">
+                            <input class="form-control form-control-lg" type="text" id="login" name="login"
+                                asp-for="Username" placeholder="Enter your Email/Username">
+                            <label class="form-label">Enter your Email/Username</label>
+                        </div>
+                    </div>
+
+                    <!-- Password input -->
+                    <br>
+                    <div class="form-group w-100">
+                        <div class="form-hover">
+                            <input class="form-control form-control-lg" type="password" id="password" name="password"
+                                asp-for="PasswordHash" placeholder="Enter your Password">
+                            <label class="form-label">Enter your Password</label>
+                        </div>
+                    </div>
+
+                    <div>        
+                        <a href="#!" class="float-right">Forgot password?</a>
+                    </div>
+                    <br>
+
+                    <div class="text-danger font-italic">
+                        @ViewBag.Error
+                    </div>
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <input type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
+                            style="padding-left: 2.5rem; padding-right: 2.5rem;" value="Login">
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a asp-controller="User" asp-action="Register"
+                                class="link-danger">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+@*
+<form asp-action="Login" method="post" class="container">
+<div class="form-group w-100">
+<div class="form-hover">
+<input class="form-control form-control-lg" type="text" id="login" name="login" asp-for="Username"
+placeholder="Username">
+<label class="form-label">Username</label>
+</div>
+</div>
+<br>
+<div class="form-group w-100">
+<div class="form-hover">
+<input class="form-control form-control-lg" type="password" id="password" name="password"
+asp-for="PasswordHash" placeholder="PasswordHash">
+<label class="form-label">Password</label>
+</div>
+</div>
+
+<div>
+<input type="submit" value="Login" class="btn btn-outline-success">
+</div>
+<div class="text-danger font-italic">
+@ViewBag.Error
+</div>
+</form> *@

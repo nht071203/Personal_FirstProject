@@ -1,0 +1,121 @@
+@model User
+
+@{
+    ViewData["Title"] = "User Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .form-group{
+        margin: 0;
+    }
+</style>
+<div class="container">
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    <h2 class="text-center">User Details</h2>
+    <h4>This is detailed information of @Model.FirstName @Model.LastName</h4>
+    <form>
+        <div class="row">
+            <div class="col-md-6 mt-4">
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="FirstName"
+                            placeholder="First Name">
+                        <label class="form-label">First Name</label>
+                        <span asp-validation-for="FirstName" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="LastName"
+                            placeholder="Last Name">
+                        <label class="form-label">Last Name</label>
+                        <span asp-validation-for="LastName" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="date" asp-for="DateOfBirth"
+                            placeholder="Date Of Birth">
+                        <label class="form-label">Date Of Birth</label>
+                        <span asp-validation-for="DateOfBirth" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="Gender"
+                            placeholder="Gender">
+                        <label class="form-label">Gender</label>
+                        <span asp-validation-for="Gender" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="ZipCode" placeholder="ZipCode">
+                        <label class="form-label">ZipCode</label>
+                        <span asp-validation-for="ZipCode" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4">
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="PhoneNumber"
+                            placeholder="Phone Number">
+                        <label class="form-label">Phone Number</label>
+                        <span asp-validation-for="PhoneNumber" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="Email" placeholder="Email">
+                        <label class="form-label">Email</label>
+                        <span asp-validation-for="Email" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="Username"
+                            placeholder="Username">
+                        <label class="form-label">Username</label>
+                        <span asp-validation-for="Username" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="IDCardPassportNumber"
+                            placeholder="ID Card/Passport Number">
+                        <label class="form-label">ID Card/Passport Number</label>
+                        <span asp-validation-for="IDCardPassportNumber" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group w-100">
+                    <div class="form-hover">
+                        <input readonly class="form-control form-control-lg" type="text" asp-for="Role"
+                            placeholder="ID Card/Passport Number">
+                        <label class="form-label">Role</label>
+                        <span asp-validation-for="Role" class="text-danger font-italic"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="form-group w-100">
+            <div class="form-hover">
+                <input readonly class="form-control form-control-lg" type="text" asp-for="Address" placeholder="Address">
+                <label class="form-label">Address</label>
+                <span asp-validation-for="Address" class="text-danger font-italic"></span>
+            </div>
+        </div>
+    </form>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+
+</div>
