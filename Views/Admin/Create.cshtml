@@ -30,8 +30,8 @@
     }
 </style>
 
-<div class="container">
-    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+<div class="container p-4 border border-primary shadow p-3 mb-5 bg-white rounded">
+    <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
     <h2 class="text-center">Add New User</h2>
     <form asp-action="Create" method="post">
         <div class="row">
@@ -164,13 +164,13 @@
                 <span asp-validation-for="Address" class="text-danger font-italic"></span>
             </div>
         </div>
+        <br>
         <input readonly class="form-control form-control-lg" type="hidden" asp-for="IsDeleted" placeholder="IsDeleted"
             value="false">
         <input type="submit" value="Add New" class="btn btn-outline-success">
         <input type="reset" value="Cancel" class="btn btn-outline-danger">
-
+        <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
     </form>
-    <a asp-action="Index" class="btn btn-primary">Back to List</a>
 </div>
 
 @section Scripts {
