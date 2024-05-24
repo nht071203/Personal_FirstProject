@@ -6,16 +6,24 @@
     ViewData["Title"] = "List Of Users";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-@* 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+    integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css"
+    integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+
+@*
 @if (@HttpContextAccessor.HttpContext.Session.GetString("_UserName") != null)
 {
-    <a asp-controller="CustomerProfile" asp-action="CustomerProfile"></a>
-    <a asp-controller="Auth" asp-action="Logout">Logout</a>
+<a asp-controller="CustomerProfile" asp-action="CustomerProfile"></a>
+<a asp-controller="Auth" asp-action="Logout">Logout</a>
 }
 else
 {
-    <li><a asp-controller="Auth" asp-action="Login"><i class="fa-solid fa-right-to-bracket" style="margin-top: 4px;"></i>
-            Login</a></li>
+<li><a asp-controller="Auth" asp-action="Login"><i class="fa-solid fa-right-to-bracket" style="margin-top: 4px;"></i>
+Login</a></li>
 } *@
 
 <div class="container mt-3">
@@ -46,9 +54,24 @@ else
                     <td>@item.PhoneNumber</td>
                     <td>@item.Role</td>
                     <td>
-                        <a asp-action="Detail" asp-route-id="@item.UserId" class="btn btn-outline-primary">Detail</a>
-                        <a asp-action="Update" asp-route-id="@item.UserId" class="btn btn-outline-success">Update</a>
-                        <a asp-action="Delete" asp-route-id="@item.UserId" class="btn btn-outline-danger">Delete</a>
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a title="Detail" asp-action="Detail" asp-route-id="@item.UserId"
+                                    class="px-2 text-primary"><i class="bx bx-detail font-size-18"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a title="Update" asp-action="Update" asp-route-id="@item.UserId"
+                                    class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a title="Delete" asp-action="Delete" asp-route-id="@item.UserId"
+                                    class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
+                            </li>
+
+                        </ul>
+                        @* <a asp-action="Detail" asp-route-id="@item.UserId" class="btn btn-outline-primary">Detail</a>
+                    <a asp-action="Update" asp-route-id="@item.UserId" class="btn btn-outline-success">Update</a>
+                    <a asp-action="Delete" asp-route-id="@item.UserId" class="btn btn-outline-danger">Delete</a> *@
                     </td>
                 </tr>
             }

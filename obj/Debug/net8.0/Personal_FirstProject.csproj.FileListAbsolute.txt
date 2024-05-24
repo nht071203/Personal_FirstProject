@@ -75,3 +75,4 @@ D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.pdb
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.genruntimeconfig.cache
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\ref\Personal_FirstProject.dll
+D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.sourcelink.json
