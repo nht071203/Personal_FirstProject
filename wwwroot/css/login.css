@@ -5,7 +5,9 @@
     height: 2px;
     background: #6b44c5;
 }
-
+.form-control{
+    padding: 1.4rem;
+}
 .h-custom {
     height: calc(100% - 73px);
 }
