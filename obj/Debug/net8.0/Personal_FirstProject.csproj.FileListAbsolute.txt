@@ -61,6 +61,7 @@ D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.MvcApplicationPartsAssemblyInfo.cache
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.RazorAssemblyInfo.cache
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.RazorAssemblyInfo.cs
+D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.sourcelink.json
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\staticwebassets.build.json
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\staticwebassets.development.json
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\staticwebassets\msbuild.Personal_FirstProject.Microsoft.AspNetCore.StaticWebAssets.props
@@ -75,4 +76,3 @@ D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.pdb
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.genruntimeconfig.cache
 D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\ref\Personal_FirstProject.dll
-D:\Ky6_SU24\OJT\Projects\PERSONAL_PROJECT_01\Personal_FirstProject\obj\Debug\net8.0\Personal_FirstProject.sourcelink.json

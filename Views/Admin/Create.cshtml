@@ -4,174 +4,156 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<style>
-    #gender {
-        top: 9px;
-        left: 7px;
-        font-size: 18px;
-        padding: 0 10px;
-        color: #acacac;
-        pointer-events: none;
-        transition: 0.15s all ease;
-        border: 1px solid rgb(141, 168, 221);
-        border-radius: 5px;
-    }
-
-    .form-group {
-        margin: 0;
-    }
-
-    #role,
-    #gender {
-        transform: translate(5px, -22px);
-        background-color: white;
-        font-size: 12px;
-        color: black;
-    }
-</style>
-
-<div class="container">
-    <a asp-action="Index" class="btn btn-primary">Back to List</a>
-    <h2 class="text-center">Add New User</h2>
-    <form asp-action="Create" method="post">
-        <div class="row">
-            <div class="col-md-6 mt-4">
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input class="form-control form-control-lg" type="text" asp-for="FirstName"
-                            placeholder="First Name">
-                        <label class="form-label">First Name</label>
-                        <span asp-validation-for="FirstName" class="text-danger font-italic"></span>
-                    </div>
+<div class="container-xl px-4 mt-4">
+    <hr class="mt-0 mb-4">
+    <form class="row" asp-action="Create" method="post">
+        <div class="col-xl-4">
+            <!-- Profile picture card-->
+            <div class="card mb-4 mb-xl-0">
+                <div class="card-header">Profile Picture</div>
+                <div class="card-body text-center">
+                    <!-- Profile picture image-->
+                    <img class="img-account-profile rounded-circle mb-2"
+                        src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                    <!-- Profile picture help block-->
+                    <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+                    <!-- Profile picture upload button-->
+                    <button class="btn btn-primary" type="button">Upload new image</button>
                 </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input class="form-control form-control-lg" type="text" asp-for="LastName"
-                            placeholder="Last Name">
-                        <label class="form-label">Last Name</label>
-                        <span asp-validation-for="LastName" class="text-danger font-italic"></span>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input class="form-control form-control-lg" type="date" asp-for="DateOfBirth"
-                            placeholder="Date Of Birth">
-                        <label class="form-label">Date Of Birth</label>
-                        <span asp-validation-for="DateOfBirth" class="text-danger font-italic"></span>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover" style="padding: 5px 10px; 
-                    border: 1px solid #ced4da;
-                    border-radius: 5px;">
-                        @* <input class="form-control form-control-lg" type="text" asp-for="Gender"
-                        placeholder="Gender"> *@
-                        <label id="gender">Gender</label>
-                        <input style="margin-top: 9px; position: relative; margin-left: -58px;" type="radio"
-                            asp-for="Gender" value="Male"> <span
-                            style="padding-right: 8px; font-size: 18px;">Male</span>
-                        <input type="radio" asp-for="Gender" value="Female"> <span
-                            style="padding-right: 8px; font-size: 18px;">Female</span>
-                        <input type="radio" asp-for="Gender" value="Other"> <span
-                            style="padding-right: 8px; font-size: 18px;">Other</span> <br>
-                    </div>
-                    <span asp-validation-for="Gender" class="text-danger font-italic"></span>
-                </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input class="form-control form-control-lg" type="text" asp-for="ZipCode" placeholder="ZipCode">
-                        <label class="form-label">ZipCode</label>
-                        <span asp-validation-for="ZipCode" class="text-danger font-italic"></span>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input class="form-control form-control-lg" type="text" asp-for="IDCardPassportNumber"
-                            placeholder="ID Card/Passport Number">
-                        <label class="form-label">ID Card/Passport Number</label>
-                        <span asp-validation-for="IDCardPassportNumber" class="text-danger font-italic"></span>
-                    </div>
-                </div>
-                <br>
-            </div>
-            <div class="col-md-6 mt-4">
-                <div class="form-group w-100">
-                    <div class="form-hover">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="small mb-1">Phone Number</label>
                         <input class="form-control form-control-lg" type="text" asp-for="PhoneNumber"
-                            placeholder="Phone Number">
-                        <label class="form-label">Phone Number</label>
-                        <span asp-validation-for="PhoneNumber" class="text-danger font-italic"></span>
+                            placeholder="Enter your Phone Number">
+                            <span asp-validation-for="PhoneNumber" class="text-danger font-italic"></span>
                     </div>
-                </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input class="form-control form-control-lg" type="text" asp-for="Email" placeholder="Email">
-                        <label class="form-label">Email</label>
-                        <span asp-validation-for="Email" class="text-danger font-italic"></span>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input class="form-control form-control-lg" type="text" asp-for="Username"
-                            placeholder="Username">
-                        <label class="form-label">Username</label>
-                        <span asp-validation-for="Username" class="text-danger font-italic"></span>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input id="password" class="form-control form-control-lg" type="password" asp-for="PasswordHash"
-                            placeholder="PasswordHash">
-                        <label class="form-label">Password</label>
-                        <span asp-validation-for="PasswordHash" class="text-danger font-italic"></span>
-                    </div>
-                </div>
-                <br>
-                <div class="form-group w-100">
-                    <div class="form-hover">
-                        <input id="confirmPassword" class="form-control form-control-lg" type="password"
-                            placeholder="Confirm Password">
-                        <label class="form-label">Confirm Password</label>
-                        <span id="confirmPasswordError" class="text-danger font-italic"></span>
-                    </div>
-                </div>
-                <br>
-
-                <div class="form-group w-100">
-                    <div class="form-hover">
+                    <div class="mb-3">
+                        <label class="small mb-1" >Role</label>
+                        @* <input class="form-control form-control-lg" type="text" asp-for="Role"
+                            placeholder="Enter your Role"> *@
                         <select class="form-control form-control-lg" asp-for="Role">
                             <option value="user">User</option>
                             <option value="HRM">HRM</option>
                         </select>
-                        <label id="role" class="form-label">Role</label>
                         <span asp-validation-for="Role" class="text-danger font-italic"></span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="form-group w-100">
-            <div class="form-hover">
-                <input class="form-control form-control-lg" type="text" asp-for="Address" placeholder="Address">
-                <label class="form-label">Address</label>
-                <span asp-validation-for="Address" class="text-danger font-italic"></span>
+        <div class="col-xl-8 h-100">
+            <!-- Account details card-->
+            <div class="card mb-4">
+                <div class="card-header">Account Details</div>
+                <div class="card-body">
+                    <input readonly class="form-control form-control-lg" type="hidden" asp-for="IsDeleted" placeholder="IsDeleted" value="false">
+                    <div>
+                        <!-- Form Group (username)-->
+                        <div class="mb-3">
+                            <label class="small mb-1">Username</label>
+                            <input class="form-control form-control-lg" type="text" asp-for="Username"
+                                placeholder="Enter your Username">
+                            <span asp-validation-for="Username" class="text-danger font-italic"></span>
+                        </div>
+                        <div class="row gx-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="small mb-1" >Password</label>
+                                <input id="password" class="form-control form-control-lg" type="password" asp-for="PasswordHash"
+                                    placeholder="Enter your Password">
+                                <span asp-validation-for="PasswordHash" class="text-danger font-italic"></span>
+                            </div>
+                            <div class="col-md-6">
+                                    <label class="small mb-1" >Confirm Password</label>
+                                    <input id="confirmPassword" class="form-control form-control-lg" type="password"
+                                    placeholder="Confirm your Password">
+                                <span id="confirmPasswordError" class="text-danger font-italic"></span>
+                            </div>
+                        </div>
+                        <!-- Form Row-->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (first name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" >First name</label>
+                                <input class="form-control form-control-lg" type="text" asp-for="FirstName"
+                                    placeholder="Enter your First Name">
+                                <span asp-validation-for="FirstName" class="text-danger font-italic"></span>
+                            </div>
+                            <!-- Form Group (last name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1" >Last name</label>
+                                <input class="form-control form-control-lg" type="text" asp-for="LastName"
+                                    placeholder="Enter your Last Name">
+                                <span asp-validation-for="LastName" class="text-danger font-italic"></span>
+                            </div>
+                        </div>
+                        <!-- Form Row        -->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (organization name)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1">Date Of Birth</label>
+                                <input class="form-control form-control-lg" type="date" asp-for="DateOfBirth"
+                                    placeholder="Enter your Date Of Birth">
+                                <span asp-validation-for="DateOfBirth" class="text-danger font-italic"></span>
+                            </div>
+                            <!-- Form Group (location)-->
+                            <div class="col-md-6">
+                                <div>
+                                    <label class="small mb-1">Gender</label>
+                                <div>
+                                <div class="form-group" style="padding: 4px 10px; border: 1px solid #ced4da; border-radius: 5px;">
+                                    <input style="margin-top: 10px; position: relative;" type="radio" asp-for="Gender" value="Male"> 
+                                    <span style="padding-right: 8px; font-size: 16px;">Male</span>
+                                    <input type="radio" asp-for="Gender" value="Female"> 
+                                    <span style="padding-right: 8px; font-size: 16px;">Female</span>
+                                    <input type="radio" asp-for="Gender" value="Other"> 
+                                    <span style="padding-right: 8px; font-size: 16px;">Other</span>
+                                </div>
+                                </div>
+                                <span asp-validation-for="Gender" class="text-danger font-italic"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Form Group (email address)-->
+                        <div class="mb-3">
+                            <label class="small mb-1">Email address</label>
+                            <input class="form-control form-control-lg" type="text" asp-for="Email"
+                                placeholder="Enter your Email">
+                                <span asp-validation-for="Email" class="text-danger font-italic"></span>
+                        </div>
+                        <!-- Form Row-->
+                        <div class="row gx-3 mb-3">
+                            <!-- Form Group (phone number)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1">Zip Code</label>
+                                <input class="form-control form-control-lg" type="text" asp-for="ZipCode"
+                                    placeholder="Enter your Zip Code">
+                                <span asp-validation-for="ZipCode" class="text-danger font-italic"></span>
+                            </div>
+                            <!-- Form Group (birthday)-->
+                            <div class="col-md-6">
+                                <label class="small mb-1">ID Card/Passport Number</label>
+                                <input class="form-control form-control-lg" type="text"
+                                    asp-for="IDCardPassportNumber" placeholder="Enter your ID Card/Passport Number">
+                                <span asp-validation-for="IDCardPassportNumber" class="text-danger font-italic"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="small mb-1">Address</label>
+                            <input class="form-control form-control-lg" type="text" asp-for="Address"
+                                placeholder="Enter your Address">
+                                <span asp-validation-for="Address" class="text-danger font-italic"></span>
+                        </div>
+                        
+                        <!-- Save changes button-->
+                        <input type="submit" value="Add New" class="btn btn-outline-success">
+                        <input type="reset" value="Cancel" class="btn btn-outline-danger">
+                        <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <input readonly class="form-control form-control-lg" type="hidden" asp-for="IsDeleted" placeholder="IsDeleted"
-            value="false">
-        <input type="submit" value="Add New" class="btn btn-outline-success">
-        <input type="reset" value="Cancel" class="btn btn-outline-danger">
-
     </form>
-    <a asp-action="Index" class="btn btn-primary">Back to List</a>
 </div>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
