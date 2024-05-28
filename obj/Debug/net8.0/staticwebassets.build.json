@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I0cnAli843MLNiGG9uFCmryTmcN3tDvk9zomCQkBio4=",
+  "Hash": "n3q9qNGja5I90s1FB+Pk8j/LQKPZhjdY/bje3zlTAF0=",
   "Source": "Personal_FirstProject",
   "BasePath": "_content/Personal_FirstProject",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Ky6_SU24\\OJT\\Projects\\PERSONAL_PROJECT_01\\Personal_FirstProject\\wwwroot\\css\\errorPage.css",
+      "SourceId": "Personal_FirstProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Ky6_SU24\\OJT\\Projects\\PERSONAL_PROJECT_01\\Personal_FirstProject\\wwwroot\\",
+      "BasePath": "_content/Personal_FirstProject",
+      "RelativePath": "css/errorPage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\errorPage.css"
+    },
     {
       "Identity": "D:\\Ky6_SU24\\OJT\\Projects\\PERSONAL_PROJECT_01\\Personal_FirstProject\\wwwroot\\css\\login.css",
       "SourceId": "Personal_FirstProject",
