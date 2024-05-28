@@ -42,6 +42,7 @@ namespace Personal_FirstProject.Models
 
         [Required (ErrorMessage = "Enter your Email")]
         [StringLength(100, MinimumLength = 10, ErrorMessage = "Please enter your real Email")]
+        [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Invalid Email Format"),]
         public string Email { get; set; }
 
         [Required (ErrorMessage = "Enter your Username")]

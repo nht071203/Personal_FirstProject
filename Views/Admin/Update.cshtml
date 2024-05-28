@@ -27,9 +27,12 @@
                             placeholder="PhoneNumber">
                     </div>
                     <div class="mb-3">
-                        <label class="small mb-1">Role</label>
-                        <input readonly class="form-control form-control-lg" type="text" asp-for="Role"
-                            placeholder="Role">
+                        <label class="small mb-1" >Role</label>
+                        <select class="form-control form-control-lg" asp-for="Role">
+                            <option value="User">User</option>
+                            <option value="HRM">HRM</option>
+                        </select>
+                        <span asp-validation-for="Role" class="text-danger font-italic"></span>
                     </div>
                 </div>
             </div>

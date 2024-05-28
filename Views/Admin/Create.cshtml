@@ -1,3 +1,7 @@
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+@using Personal_FirstProject.Controllers
+@using System.Text.Json
 @model User
 @{
     ViewData["Title"] = "Create";
@@ -32,8 +36,16 @@
                         @* <input class="form-control form-control-lg" type="text" asp-for="Role"
                             placeholder="Enter your Role"> *@
                         <select class="form-control form-control-lg" asp-for="Role">
-                            <option value="user">User</option>
-                            <option value="HRM">HRM</option>
+                            <option value="User">User</option>
+                            @if (@HttpContextAccessor.HttpContext.Session.GetString("_User") != null)
+                            {
+                                var loggedInUserJson = HttpContextAccessor.HttpContext.Session.GetString("_User");
+                                var loggedInUser = JsonSerializer.Deserialize<User>(loggedInUserJson);
+                                                        
+                                if (loggedInUser.Role.ToLower() != "hrm"){
+                                    <option value="HRM">HRM</option>
+                                }
+                            }
                         </select>
                         <span asp-validation-for="Role" class="text-danger font-italic"></span>
                     </div>

@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "D:\\Ky6_SU24\\OJT\\Projects\\PERSONAL_PROJECT_01\\Personal_FirstProject\\wwwroot\\css\\errorPage.css",
+      "PackagePath": "staticwebassets\\css\\errorPage.css"
+    },
+    {
       "Id": "D:\\Ky6_SU24\\OJT\\Projects\\PERSONAL_PROJECT_01\\Personal_FirstProject\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },

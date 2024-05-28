@@ -30,9 +30,10 @@ namespace Personal_FirstProject
             services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer(Configuration
             .GetConnectionString("DefaultConnection")));
 
+            // services.AddControllersWithViews();
             services.AddSession( option =>
             {
-                option.IdleTimeout = TimeSpan.FromDays(3);
+                option.IdleTimeout = TimeSpan.FromMinutes(30);
                 option.Cookie.HttpOnly = true;
                 option.Cookie.IsEssential = true;
             });
@@ -58,7 +59,7 @@ namespace Personal_FirstProject
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
